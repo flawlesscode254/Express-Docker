@@ -1,0 +1,11 @@
+version: '3'
+services:
+  wizard-cont:
+    build: .
+    ports:
+      - "3450:3450"
+    volumes:
+      - "./:/app"
+      - "/app/node_modules"
+    environment:
+      - "PORT=3450"
